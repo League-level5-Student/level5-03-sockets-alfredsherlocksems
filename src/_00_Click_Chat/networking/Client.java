@@ -52,7 +52,8 @@ public class Client {
 	public void sendClick() {
 		try {
 			if (os != null) {
-				os.writeObject("CLICK SENT FROM CLIENT");
+				String s = JOptionPane.showInputDialog("Type message");
+				os.writeObject("Message: " + s + " -- sent from client");
 				os.flush();
 			}
 		} catch (IOException e) {

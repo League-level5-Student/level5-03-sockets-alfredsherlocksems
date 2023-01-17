@@ -65,7 +65,8 @@ public class Server {
 	public void sendClick() {
 		try {
 			if (os != null) {
-				os.writeObject("CLICK SENT FROM SERVER");
+				String s = JOptionPane.showInputDialog("Type message");
+				os.writeObject("Message: " + s + " -- sent from server");
 				os.flush();
 			}
 		} catch (IOException e) {
